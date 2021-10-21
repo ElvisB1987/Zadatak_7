@@ -1,0 +1,56 @@
+.pages > a {
+  cursor: default;
+  text-decoration: none;
+  color: white;
+}
+
+.pages > a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+p {
+  color: $color_Dark-gray;
+  line-height: 30px;
+}
+.paragraphpopUp {
+  margin-left: 53px;
+  margin-bottom: 30px;
+  margin-right: 23px;
+}
+.cyanSpan {
+  color: $color_Moderate_cyan;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+span {
+  font-size: 14px;
+  padding: 15px;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.paragraphBlack {
+  font-size: 32px;
+  font-weight: 700;
+  color: $color_Black;
+
+  &_popUp {
+    font-size: 18px;
+  }
+}
+
+#price::before {
+  content: "$";
+  font-size: 32px;
+  font-weight: 700;
+  color: $color_Black;
+}
+
+.h1_heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,83 @@
+.btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
+    width: 157px;
+  }
+
+  &_black {
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: $color_Dark-gray;
+    &::after {
+      background-color: #f2f2f2;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+  }
+
+  &_black:hover {
+    opacity: 0.5;
+  }
+
+  &_green {
+    background-color: $color_Moderate_cyan;
+    color: white;
+    &::after {
+      background-color: #f2f2f2;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+  }
+
+  &_out {
+    background-color: $color_Dark-gray;
+    color: white;
+  }
+
+  &_green:hover {
+    background-color: $color_Dark_cyan;
+  }
+
+  &_holder {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+  &_content {
+    margin-left: 15px;
+  }
+  &-animated {
+    animation: moveInBotton 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+  }
+}

@@ -1,0 +1,15 @@
+.pgb {
+  &_holder {
+    background-color: #f2f2f2;
+    height: 15px;
+    border-bottom: 10px;
+    width: 90%;
+    border-radius: 10px;
+  }
+
+  &_field {
+    background-color: $color_Moderate_cyan;
+    height: 100%;
+    border-radius: 10px;
+  }
+}

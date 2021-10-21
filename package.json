@@ -1,0 +1,23 @@
+{
+  "name": "zadatak_7",
+  "version": "1.0.0",
+  "description": "**To do this challenge, you need a basic understanding of HTML, CSS and JavaScript.**",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  },
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElvisB1987/Zadatak_7.git"
+  },
+  "author": "Elvis Balija",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElvisB1987/Zadatak_7/issues"
+  },
+  "homepage": "https://github.com/ElvisB1987/Zadatak_7#readme"
+}
