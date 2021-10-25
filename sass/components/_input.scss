@@ -2,20 +2,24 @@ input[type="radio"] {
   margin: 20px;
 }
 
-input[type="number"]{
+input[type="number"] {
   width: 100px;
-    border-radius: 30px;
-    text-align: center;
-    border: 1px solid lightgray;
+  border-radius: 30px;
+  text-align: center;
+  border: 1px solid lightgray;
 }
 
-input[type="number"]::before{
+input[type="number"]::before {
   content: "$";
   font-size: 32px;
   font-weight: 700;
   color: $color_Black;
 }
 
-img[alt="Check"]{
+img[alt="Check"] {
   width: 110px;
+}
+
+img[alt="burger_box"]{
+  display: none;
 }

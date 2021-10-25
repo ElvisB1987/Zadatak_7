@@ -54,3 +54,11 @@ span {
   justify-content: space-between;
   align-items: center;
 }
+
+#total::before{
+content: "$";
+}
+
+#total::after{
+  content: "backed";
+}

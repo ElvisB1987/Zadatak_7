@@ -1,3 +1,10 @@
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    width: 0px; }
+  80% {
+    width: 50%; } }
+
 .pages > a {
   cursor: default;
   text-decoration: none;
@@ -45,6 +52,12 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+
+#total::before {
+  content: "$"; }
+
+#total::after {
+  content: "backed"; }
 
 *,
 *::after,
@@ -134,7 +147,8 @@ body {
 .pgb_field {
   background-color: #3cb4ac;
   height: 100%;
-  border-radius: 10px; }
+  border-radius: 10px;
+  animation: moveInRight 1s ease-out; }
 
 input[type="radio"] {
   margin: 20px; }
@@ -153,6 +167,9 @@ input[type="number"]::before {
 
 img[alt="Check"] {
   width: 110px; }
+
+img[alt="burger_box"] {
+  display: none; }
 
 .header {
   height: 400px;
@@ -259,6 +276,11 @@ section {
   .label_holder_popUp {
     padding: 0; }
 
+.labelDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+
 .label_bottom {
   display: flex;
   justify-content: space-between; }
@@ -274,7 +296,11 @@ section {
   align-items: center;
   margin-top: 20px; }
 
+.chose_holder:active {
+  color: #3cb4ac; }
+
 .pop_Up {
+  display: none;
   position: absolute;
   background-color: rgba(102, 94, 94, 0.631373);
   width: 100%;
@@ -309,6 +335,7 @@ section {
   align-items: center;
   justify-content: space-between;
   padding: 20px;
+  transition: all 1s;
   border-top: 1px solid; }
   .input_activ_support {
     justify-content: flex-end; }
@@ -338,3 +365,83 @@ section {
   width: 40%;
   margin: 20% auto;
   padding: 30px; }
+
+@media (min-width: 150px) and (max-width: 550px) {
+  body {
+    font-size: 14px; }
+  .header {
+    background-image: url(./images/image-hero-mobile.jpg); }
+  img[alt="burger_box"] {
+    display: block; }
+  .pages {
+    display: none; }
+  .header_box {
+    margin-left: 0;
+    margin-right: 0; }
+  .container {
+    width: 90%; }
+  .btn_holder {
+    padding: 0;
+    justify-content: space-around; }
+  #button_black {
+    width: auto; }
+  #bookmark {
+    display: none; }
+  h1 {
+    text-align: center; }
+  #paragraphHead {
+    text-align: center;
+    padding: 5px; }
+  .second_holder {
+    height: auto; }
+  .second_element {
+    flex-direction: column;
+    margin-top: 20px; }
+  .data_holder {
+    padding: 0;
+    width: auto; }
+  .data_holder:nth-child(2) {
+    border-top: solid 1px lightgray;
+    border-bottom: solid 1px lightgray;
+    border-left: none;
+    border-right: none; }
+  .pgb_holder {
+    margin-bottom: 20px; }
+  .h1_heading {
+    flex-direction: column;
+    align-items: flex-start; }
+  .label_bottom {
+    flex-direction: column; }
+  .number_holder {
+    margin-bottom: 20px; }
+  .input_activ {
+    width: 100%;
+    flex-direction: column; }
+  .groupElement_popUp {
+    width: 90%; }
+  .label_holder_popUp {
+    flex: none;
+    flex-wrap: wrap; }
+  .paragraphpopUp {
+    margin-left: 20px; }
+  .numberpopUp {
+    order: 1;
+    margin-left: 20px; }
+  .confirm {
+    width: 90%; }
+  .title_chose {
+    flex-wrap: wrap; }
+  .mobile_menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(23, 207, 207, 0.733);
+    z-index: 2;
+    display: none; }
+  img[alt="close_menu"] {
+    position: absolute;
+    right: 47px;
+    top: 48px;
+    width: 20px; } }

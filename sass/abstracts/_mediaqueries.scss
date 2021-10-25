@@ -1,0 +1,117 @@
+
+@media (min-width: 150px) and (max-width: 550px){
+body{
+    font-size: 14px;
+}
+
+.header {
+    background-image: url(./images/image-hero-mobile.jpg);
+}
+
+img[alt="burger_box"]{
+    display: block;
+  }
+
+.pages {
+    display: none;
+}
+
+.header_box{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container{
+    width: 90%;
+}
+.btn_holder{
+    padding: 0;
+    justify-content: space-around;
+}
+#button_black{
+width: auto;
+}
+#bookmark{
+    display: none;
+}
+h1{
+    text-align: center;
+}
+#paragraphHead{
+    text-align: center;
+    padding: 5px;
+}
+
+.second_holder{
+    height: auto;
+}
+.second_element{
+    flex-direction: column;
+    margin-top: 20px;
+}
+.data_holder{
+    padding: 0;
+    width: auto;
+}
+.data_holder:nth-child(2) {
+    border-top: solid 1px lightgray;
+    border-bottom: solid 1px lightgray;
+    border-left: none;
+    border-right: none;
+  }
+.pgb_holder{
+    margin-bottom: 20px;
+}
+.h1_heading{
+    flex-direction: column;
+    align-items: flex-start;
+}
+.label_bottom{
+    flex-direction: column;
+}
+.number_holder{
+    margin-bottom: 20px;
+}
+.input_activ{
+    width: 100%;
+    flex-direction: column;
+}
+.groupElement_popUp{
+    width: 90%;
+}
+
+.label_holder_popUp{
+    flex: none;
+    flex-wrap: wrap;
+}
+.paragraphpopUp{
+    margin-left: 20px;
+}
+.numberpopUp{
+order: 1;
+margin-left: 20px;
+}
+.confirm{
+    width: 90%;
+}
+.title_chose{
+    flex-wrap: wrap;
+}
+.mobile_menu{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: hsla(180, 80%, 45%, 0.733);
+    z-index: 2;
+    display: none;
+}
+img[alt="close_menu"]{
+position: absolute;
+right: 47px;
+top: 48px;
+width: 20px;
+}
+}
+

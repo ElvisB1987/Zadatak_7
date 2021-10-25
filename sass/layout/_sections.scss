@@ -68,7 +68,7 @@ section {
   align-items: center;
   border-radius: 10px;
 
-  &_popUp{
+  &_popUp {
     width: 50%;
     margin: 10% auto;
   }
@@ -84,20 +84,26 @@ section {
 
 .label_holder {
   display: flex;
-  flex-direction: column;
+flex-direction: column;
   row-gap: 25px;
   border: solid 1px lightgray;
   border-radius: 10px;
   width: 90%;
-padding: 25px;
+  padding: 25px;
   &_out {
     opacity: 0.5;
     margin-bottom: 20px;
   }
 
-  &_popUp{
+  &_popUp {
     padding: 0;
   }
+}
+
+.labelDiv{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .label_bottom {
@@ -118,11 +124,16 @@ padding: 25px;
   margin-top: 20px;
 }
 
+.chose_holder:active {
+  color: $color_Moderate_cyan;
+}
+
 //#########################POUP##################//
 
 .pop_Up {
+  display: none;
   position: absolute;
-  background-color: opacify($color: #665e5ea1, $amount: 0) ;
+  background-color: opacify($color: #665e5ea1, $amount: 0);
   width: 100%;
   height: 250%;
   top: 0;
@@ -130,13 +141,13 @@ padding: 25px;
   z-index: 1;
 }
 
-#close{
+#close {
   position: absolute;
   right: 2%;
   top: 2%;
 }
 
-#close:hover{
+#close:hover {
   cursor: pointer;
 }
 .radio_holder {
@@ -155,36 +166,35 @@ padding: 25px;
   column-gap: 15px;
 }
 
-.input_activ{
+.input_activ {
   display: none;
-    align-items: center;
-    justify-content: space-between;
-padding: 20px;
-
-border-top: 1px solid ;
-    &_support{
-      justify-content: flex-end;
-    }
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  transition: all 1s;
+  border-top: 1px solid;
+  &_support {
+    justify-content: flex-end;
+  }
 }
 
-.input_holder{
+.input_holder {
   display: flex;
   column-gap: 15px;
-
 }
 
-.accept{
+.accept {
   display: none;
   position: absolute;
-    background-color: rgba(102, 94, 94, 0.631373);
-    width: 100%;
-    height: 250%;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  background-color: rgba(102, 94, 94, 0.631373);
+  width: 100%;
+  height: 250%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.confirm{
+.confirm {
   position: relative;
   display: flex;
   flex-direction: column;
