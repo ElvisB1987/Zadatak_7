@@ -165,7 +165,30 @@ body {
   animation: moveInRight 1s ease-out; }
 
 input[type="radio"] {
-  margin: 20px; }
+  display: grid;
+  place-content: center;
+  margin: 20px;
+  appearance: none;
+  background-color: #fff;
+  font: inherit;
+  color: currentColor;
+  width: 1.30em;
+  height: 1.30em;
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  transform: translateY(-0.075em); }
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.70em;
+  height: 0.70em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #3cb4ac; }
+
+input[type="radio"]:checked::before {
+  transform: scale(1); }
 
 input[type="number"] {
   width: 100px;
