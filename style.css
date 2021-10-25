@@ -148,6 +148,9 @@ body {
   animation: moveInBotton 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
+#burger_icon:hover, #close_icon:hover {
+  cursor: pointer; }
+
 .pgb_holder {
   background-color: #f2f2f2;
   height: 15px;
