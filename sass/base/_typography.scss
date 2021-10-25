@@ -9,6 +9,19 @@
   text-decoration: underline;
 }
 
+.map > a{
+  cursor: default;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.map > a:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 p {
   color: $color_Dark-gray;
   line-height: 30px;

@@ -183,7 +183,7 @@ flex-direction: column;
   column-gap: 15px;
 }
 
-.accept {
+.accept  {
   display: none;
   position: absolute;
   background-color: rgba(102, 94, 94, 0.631373);
@@ -201,6 +201,29 @@ flex-direction: column;
   row-gap: 25px;
   background-color: white;
   align-items: center;
+  border-radius: 10px;
+  width: 40%;
+  margin: 20% auto;
+  padding: 30px;
+}
+
+.mobile_menu{
+  display: none;
+  position: absolute;
+  background-color: rgba(102, 94, 94, 0.631373);
+  width: 100%;
+  height: 250%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.map{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  background-color: white;
   border-radius: 10px;
   width: 40%;
   margin: 20% auto;

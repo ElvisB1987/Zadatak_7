@@ -10,8 +10,12 @@ var buttonNoReward = document.getElementById("noReward");
 var totalBackers = document.getElementById("total_backers");
 var acceptPopUp = document.querySelector(".accept");
 var acceptButton = document.getElementById("acceptButton");
-var burger = document.getElementsByAttributeName("burger_box");
+var burgerIcon = document.getElementById("burger_icon")
+var closeIcon = document.getElementById("close_icon")
+var bookmarkButton = document.getElementById("button_black");
+var bookmarkTxt = document.getElementById("bookmark")
 
+//schow PopUp display with elemnts
 firstButton.addEventListener("click", () => {
     popUpwindow.style.display = "block";
 });
@@ -47,58 +51,58 @@ containerInput.forEach((input) => {
 });
 
 
-// No reward Action 
+// logic of change values 
 
-update();
+updateProgressBar();
 
 var backed = false;
-document.querySelectorAll('.noReward').forEach(function (btn) {
+document.querySelectorAll('.noReward').forEach(function (button) {
 
 
-    btn.addEventListener('click', function () {
-        let inputToSubmit = btn.parentElement.querySelector('.input_holder input') //getting the input being submitted based on its position relative to the button clicked
+    button.addEventListener('click', function () {
+        let inputToSubmit = button.parentElement.querySelector('.input_holder input')
 
         let data = {
             reward: inputToSubmit.getAttribute('data-reward'),
-            amount: inputToSubmit.value
+            sum: inputToSubmit.value
         }
 
-        if (data.amount >= 0) {
+        if (data.sum >= 0) {
             console.log('Data to submit', data);
 
-            updateNumbers(data.amount, data.reward)
+            changeValue(data.sum, data.reward)
 
             popUpwindow.style.display = "none"
             acceptPopUp.style.display = "block"
         } else {
-            console.warn('No.'); //method for displaying error message goes here
+
         }
 
     })
 })
 
-function updateNumbers(amountToAdd, reward) {
-    updateGatheredAmount(amountToAdd)
+function changeValue(sumToAdd, reward) {
+    replaceBankstatus(sumToAdd)
 
-    update()
-    updateAvailableRewards(reward)
-    updateBackersNumber()
+    updateProgressBar()
+    changesStock(reward)
+    changeValueBackers()
 }
 
 
-function updateAvailableRewards(reward) {
+function changesStock(reward) {
     let elementsClass = reward.toLowerCase().replaceAll(' ', '-')
     console.log(elementsClass);
-    let amountContainers = document.querySelectorAll(`.left.${elementsClass}`)
+    let sumContainers = document.querySelectorAll(`.left.${elementsClass}`)
 
-    if (amountContainers != null) {
-        amountContainers.forEach(label => {
+    if (sumContainers != null) {
+        sumContainers.forEach(label => {
             label.innerText = parseInt(label.innerText) - 1;
         })
     }
 }
 
-function updateBackersNumber() {
+function changeValueBackers() {
     if (backed === false) {
         let currBakcers = document.getElementById('total_backers').innerText.replaceAll(',', '')
         document.getElementById('total_backers').innerText = (parseInt(currBakcers) + 1).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -107,14 +111,13 @@ function updateBackersNumber() {
 }
 
 
-function updateGatheredAmount(value) {
+function replaceBankstatus(value) {
     let curr = document.getElementById('price').innerText.replaceAll(',', '')
-    let newAmount = parseInt(curr) + parseInt(value)
-    document.getElementById('price').innerText = newAmount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    let newsum = parseInt(curr) + parseInt(value)
+    document.getElementById('price').innerText = newsum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
-function update() {
-    //this will add the progress percentage to the progress
+function updateProgressBar() {
     let gathered = parseInt(document.querySelector('#price').innerText.replaceAll(',', ''))
     let goal = parseInt(document.querySelector('#total').innerText.replaceAll(',', ''))
 
@@ -138,6 +141,25 @@ acceptButton.addEventListener("click", () => {
     acceptPopUp.style.display = "none";
 });
 
-burger.addEventListener("click", () => {
-    burger.style.display = "none"
+//mobile menu
+burgerIcon.addEventListener("click", () => {
+    burgerIcon.style.display = "none"
+    document.querySelector(".mobile_menu").style.display = "block";
+});
+
+closeIcon.addEventListener("click", () => {
+    document.querySelector(".mobile_menu").style.display = "none";
+    burgerIcon.style.display = "block"
 })
+
+// Bookmark Change
+
+bookmarkButton.addEventListener("click", () => {
+    document.getElementById("circle").style.fill = "hsl(176, 72%, 28%)"
+    bookmarkTxt.innerHTML = "Bookmarked";
+    bookmarkTxt.style.color = "hsl(176, 72%, 28%)"
+
+
+
+
+});

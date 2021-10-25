@@ -23,3 +23,8 @@ img[alt="Check"] {
 img[alt="burger_box"]{
   display: none;
 }
+
+input[type="number"]:focus{
+  outline: none;
+  border-color: $color_Moderate_cyan;
+}
